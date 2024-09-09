@@ -9,11 +9,11 @@ The **Investment Guidance** project is a web application designed to provide inv
 
 ## Technologies
 
-- *Frontend*: HTML, CSS
-- *Backend*: Flask (Python)
-- *Machine Learning*: TensorFlow (Keras), scikit-learn
-- *Data Source*: Yahoo Finance API
-- *Data Visualization*: Matplotlib
+- **Frontend**: HTML, CSS
+- **Backend**: Flask (Python)
+- **Machine Learning**: TensorFlow (Keras), scikit-learn
+- **Data Source**: Yahoo Finance API
+- **Data Visualization**: Matplotlib
 
 ## Setup and Installation
 

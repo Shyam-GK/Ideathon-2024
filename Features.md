@@ -30,4 +30,8 @@
 ## Future Enhancements
 - **Support for More Assets**: Include additional cryptocurrencies or commodities.
 - **User Authentication**: Implement user login and profile management.
+<<<<<<< HEAD
 - **Enhanced Visualization**: Improve graph features and interactivity.
+=======
+- **Enhanced Visualization**: Improve graph features and interactivity.
+>>>>>>> ac806044fd19503e34408510cceccab4d041dbd4
