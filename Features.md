@@ -1,21 +1,33 @@
-Features Implemented
+# Features of the Investment Guidance Application
 
-1)Background Video: The application uses a Fullscreen background video to enhance visual appeal across all pages.
+## Key Features
 
-2)User Input Form: On the index.html page, users can enter personal financial details, including their name, age, investment amount, investment period, and period unit. The form uses various input types like text, number, and select to collect information.
+### Data Loading
+- **Stocks**: Fetches historical stock data using the Yahoo Finance API.
+- **Cryptocurrencies**: Retrieves historical cryptocurrency data.
+- **Gold**: Retrieves historical data for gold futures.
 
-3)Investment Prediction: The index.html page submits user input to the /predict endpoint to get investment recommendations based on the data entered.
+### Data Preprocessing
+- **Scaling**: Uses MinMaxScaler to scale the data to the range [0, 1].
+- **Training Data Preparation**: Prepares data sequences for model training.
 
-4)Display Prediction Results: The result.html page shows detailed results of investment predictions, including user input, predicted returns for different investment options, and the best investment recommendation.
+### Model Training
+- **LSTM Model**: Implements an LSTM neural network to predict future values.
+- **Model Saving**: Saves trained models to disk for future use.
 
-5)View Graphs: The view_graphs.html page allows users to view available investment graphs. Each investment symbol has a button linking to a detailed graph.
+### Prediction
+- **Future Value Prediction**: Predicts future asset prices based on user-defined investment periods.
 
-6)Graph Visualization: The show_graph.html page displays a specific graph related to an investment symbol. The graph image is dynamically referenced based on the selected symbol.
+### Graph Generation
+- **Graph Creation**: Generates graphs showing historical closing prices of assets.
+- **Graph Display**: Allows users to view generated graphs on the web interface.
 
-7)Navigation and User Interface: The application includes navigation options such as form submission, viewing prediction results, and accessing graphs, with user-friendly buttons for interactions.
+### Web Interface
+- **Form Input**: Collects user input for name, age, investment amount, and period.
+- **Results Display**: Shows predicted returns and the best investment option.
+- **Graph Viewing**: Provides options to view graphs for various assets.
 
-8)Responsive Design: CSS Flexbox is used for centring content and adjusting the layout for different devices, ensuring the interface is usable on various screens.
-
-9)Styling and User Experience: The application features consistent CSS styling with colours, borders, shadows, and transitions to enhance user experience and visual appeal.
-
-10)Real-time Alerts and Notifications: The application is designed to potentially handle real-time updates and alerts, although specific implementation details for these features are not provided in the HTML files.
+## Future Enhancements
+- **Support for More Assets**: Include additional cryptocurrencies or commodities.
+- **User Authentication**: Implement user login and profile management.
+- **Enhanced Visualization**: Improve graph features and interactivity.

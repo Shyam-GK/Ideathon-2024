@@ -46,7 +46,7 @@ These can be installed via `pip` as shown in the installation instructions.
     ```
 2. Access the web interface at `http://127.0.0.1:5000/`.
 3. Enter the required details into the form and submit to see investment predictions.
-4. If the model has not been trained, it will take some time initially. Adjust the number of epochs if needed for more accurate     results.
+4. If the model has not been trained, it will take some time initially. Adjust the number of epochs if needed for more accurate results.
 
 ## Contact
 
