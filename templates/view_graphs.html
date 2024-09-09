@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Graphs</title>
+    <style>
+        /* Reset default margins and padding */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Background Video */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            background-color: black;
+        }
+
+        /* Center container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 60px; /* Added padding to ensure the top part doesn't get hidden */
+            padding-bottom: 60px; /* Space at the bottom for comfortable scrolling */
+            z-index: 1;
+            position: relative;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons for each symbol */
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff4757;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #e84118;
+        }
+
+        /* Allow scrolling within the container */
+        .scrollable-content {
+            max-height: 100vh;
+            overflow-y: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="https://cdn.pixabay.com/video/2024/03/15/204306-923909642_large.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Centered Content -->
+    <div class="container">
+        <h2>View Graphs for Stocks and Cryptos</h2>
+
+        <!-- Scrollable content with buttons for each symbol -->
+        <div class="scrollable-content">
+            {% for symbol in symbols %}
+            <a href="/show-graph/{{ symbol }}">
+                <button>{{ symbol }}</button>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
